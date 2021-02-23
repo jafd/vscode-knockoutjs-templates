@@ -2,9 +2,11 @@
   "name": "knockoutjs-templates",
   "displayName": "KnockoutJS templates",
   "description": "Highlight KnockoutJS bindings properly",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": {"name": "Yaroslav Fedevych", "email": "yaroslav@fedevych.name", "url": "https://github.com/jafd"},
   "publisher": "jafd",
+  "repository": "https://github.com/jafd/vscode-knockoutjs-templates",
+  "license": "3-Clause BSD License",
   "engines": {
     "vscode": "^1.53.0"
   },

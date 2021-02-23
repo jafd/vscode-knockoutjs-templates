@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "text.html.knockoutjs",
+  "injectionSelector": "L:text.html",
+  "patterns": [
+    { "include": "#knockoutjs-block-start" },
+    { "include": "#knockoutjs-block-end" }
+  ],
+  "repository": {
+    "knockoutjs-block-start": {
+      "patterns": [
+        {
+          "contentName": "meta.embedded.inline.knockoutjs",
+          "begin": "<!--\\s*(ko)\\s+(ifnot|if|foreach|with|using|template|component|let)(:)\\s*",
+          "end": "\\s*-->",
+          "beginCaptures": {
+            "0": {
+              "name": "comment.block.knockoutjs.start"
+            },
+            "1": {
+              "name": "keyword.ko"
+            },
+            "2": {
+              "name": "keyword.binding"
+            },
+            "3": {
+              "name": "punctuation.definition.knockoutjs"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "comment.block.knockoutjs.start"
+            }
+          },
+          "patterns": [{ "include": "source.js" }]
+        }
+      ]
+    },
+    "knockoutjs-block-end": {
+      "patterns": [
+        {
+          "match": "<!--\\s*(/ko)\\s*-->",
+          "captures": {
+            "0": {
+              "name": "comment.block.knockoutjs.end"
+            },
+            "1": {
+              "name": "keyword.knockoutjs.koend"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

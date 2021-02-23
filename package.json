@@ -1,0 +1,40 @@
+{
+  "name": "knockoutjs-templates",
+  "displayName": "KnockoutJS templates",
+  "description": "Highlight KnockoutJS bindings properly",
+  "version": "0.0.1",
+  "author": {"name": "Yaroslav Fedevych", "email": "yaroslav@fedevych.name", "url": "https://github.com/jafd"},
+  "publisher": "jafd",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "text.html.knockoutjs",
+        "path": "./syntaxes/knockoutjs.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.inline.knockoutjs": "javascript"
+        },
+        "injectTo": [
+          "text.html",
+          "text.html.*"
+        ]
+      },
+      {
+        "scopeName": "text.html.knockoutjs.databind",
+        "path": "./syntaxes/knockoutjs-databind.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.inline.javascript": "javascript"
+        },
+        "injectTo": [
+          "text.html",
+          "text.html.*"
+        ]
+      }
+    ]
+  }
+}

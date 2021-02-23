@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "text.html.knockoutjs.databind",
+  "injectionSelector": "L:meta.attribute.data-x.data-bind.html",
+  "patterns": [
+    {
+      "match": "\"([^\"]+)\"",
+      "captures": {
+        "1": {
+          "name": "meta.embedded.inline.javascript",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

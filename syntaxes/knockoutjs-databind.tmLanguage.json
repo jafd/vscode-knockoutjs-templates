@@ -4,17 +4,24 @@
   "injectionSelector": "L:meta.attribute.data-x.data-bind.html",
   "patterns": [
     {
-      "match": "\"([^\"]+)\"",
-      "captures": {
-        "1": {
-          "name": "meta.embedded.inline.javascript",
-          "patterns": [
-            {
-              "include": "source.js"
-            }
-          ]
+      "begin": "\\G(\")",
+      "end": "(?<!\\G)\\1",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.knockoutjs.bindings.start"
         }
-      }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.knockoutjs.bindings.end"
+        }
+      },
+      "contentName": "meta.embedded.inline.javascript",
+      "patterns": [
+        {
+          "include": "source.js"
+        }
+      ]
     }
   ]
 }

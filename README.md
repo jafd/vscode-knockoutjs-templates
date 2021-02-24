@@ -21,3 +21,7 @@ only in double quotes.
 ## Bugs
 
 This extension does not contain bugs.
+
+## License
+
+3-clause BSD license, see `LICENSE`.

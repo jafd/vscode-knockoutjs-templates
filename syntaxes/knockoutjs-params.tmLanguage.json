@@ -1,0 +1,27 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "scopeName": "text.html.knockoutjs.params",
+    "injectionSelector": "L:meta.attribute.unrecognized.params.html",
+    "patterns": [
+      {
+        "begin": "\\G(\")",
+        "end": "(?<!\\G)\\1",
+        "beginCaptures": {
+          "0": {
+            "name": "punctuation.definition.knockoutjs.bindings.start"
+          }
+        },
+        "endCaptures": {
+          "0": {
+            "name": "punctuation.definition.knockoutjs.bindings.end"
+          }
+        },
+        "contentName": "meta.embedded.inline.javascript",
+        "patterns": [
+          {
+            "include": "source.js"
+          }
+        ]
+      }
+    ]
+  }

@@ -36,6 +36,17 @@
           "text.html",
           "text.html.*"
         ]
+      },
+      {
+        "scopeName": "text.html.knockoutjs.params",
+        "path": "./syntaxes/knockoutjs-params.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.inline.javascript": "javascript"
+        },
+        "injectTo": [
+          "text.html",
+          "text.html.*"
+        ]
       }
     ]
   }
